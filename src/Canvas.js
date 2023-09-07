@@ -12,8 +12,22 @@ const Canvas = props => {
 
         //context.fillRect(0,0, context.canvas.width, context.canvas.height)
 
-        context.fillRect(100,100,100,100)
-        context.fillRect(100,300,100,100)
+
+        //arc / circle
+        for(var i = 0; i < 5; i++) {
+            var x = Math.random() * window.innerWidth
+            var y = Math.random() * window.innerHeight
+
+
+            context.beginPath()
+            context.strokeStyle = context.fillStyle = "#00acc9"
+            context.arc(x, y, 30, 0, Math.PI * 2, false)
+            context.stroke()
+        }
+        context.beginPath()
+        context.fillStyle = "#00acc9"
+        context.arc(600, 500, 30, 0, Math.PI * 2, false)
+        context.stroke()
     }, [])
 
 
